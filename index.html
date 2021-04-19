@@ -6,12 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage by Jesus Rangel</title>
   
-  <!-- Bootstrap 5 CSS from CDN -->
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-  <!-- Action on Scroll CSS from CDN -->
+  <!-- Action on Scroll CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <!-- Tippy Scale animation CSS -->
+  <link href="https://unpkg.com/tippy.js@6/animations/scale.css" rel="stylesheet">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
@@ -19,12 +28,13 @@
 <body>
   <header>
     <a href="#banner" class="logo">Homepage<span>.</span></a>
+    <div class="menu_toggle" onclick="toggleMenu()"></div>
     <ul class="navigation">
-      <li><a href="#banner">Back To Top</a></li>
-      <li><a href="#poetry">Poetry</a></li>
-      <li><a href="#boxing">Boxing</a></li>
-      <li><a href="#jazz">Jazz</a></li>
-      <li><a href="#programming">Programming</a></li>
+      <li><a href="#banner" onclick="toggleMenu()">Back To Top</a></li>
+      <li><a href="#poetry" onclick="toggleMenu()">Poetry</a></li>
+      <li><a href="#boxing" onclick="toggleMenu()">Boxing</a></li>
+      <li><a href="#jazz" onclick="toggleMenu()">Jazz</a></li>
+      <li><a href="#programming" onclick="toggleMenu()">Programming</a></li>
     </ul>
   </header>
   <section id="banner">
@@ -39,25 +49,32 @@
     <div class="row">
       <div class="col-lg-6" data-aos="fade-right">
         <h2 class="title_text">
-          <span>P</span>oetry
+          <span>P</span>oetry and manliness
         </h2>
+        <p>Venezuela demands old-school masculinity.</p>
+        <p>Likes Poetry? Gay.</p>
+        <p>Not tall? Gay.</p>
+        <p>Likes Ballet? Super Gay.</p>
+        <p>So I was super gay, super bullied, super using videogames as an escape mechanism.</p>
+        <p>But at 25 years old I flew off to Colombia to study literature.</p>
+        <p>There I discovered a masculinity granted by the Great Feminine. </p>
+        <p>Giving yourself permission to feel vulnerable, to feel pain, is the only way to find healing.</p>
         <p>
-          Being born in Venezuela means you have to fit a specific manliness profile. You like Poetry? Gay. Ballet? Super gay. And of course, being super gay is the thing super worst that could happen to a man in Venezuela.
-          <br><br>
-          But then, at 25 years old (11 years ago), I would take a Master's Degree in Literature and learn that, in order to become the man you want to be, you have to get in touch with the Great Feminine, the Yin energy in you.
-          <br><br>
-          Back then I had injuries from soccer and weightlifting that didn't allow me to do combat sports. But after coming into contact with my feminine side, I decided to nurture those wounds, learn to live with them and to exercise according to them.   
-          <br><br>
-          To follow <a href="https://en.wikipedia.org/wiki/Bill_Wallace_(martial_artist)">Bill "Superfoot" Wallace</a>'s advice: "The guy who said no pain, no gain? He's DEAD! Let it heal, let it rest!".
-          <br><br>
-          So now I can proudly say that the most fun I had in 2019 involved getting my nose broken by my boxing coach and getting away with him not noticing during the fight. And that I love poetry as well as Ballet. 
-          <br><br>
-          Oh, and the picture in this section... That is NOT Billie "Superfoot" Wallace! That is one of darkest, funniest poets America has ever seen, and you will see her covered in my Final Project dedicated to my heroes.
+          In Bill "Superfoot" Wallace's words: 
+          <a href="https://www.youtube.com/watch?v=jb4ZJUaVGJc&t=582s" target="_blank">
+            "The guy who said no pain, no gain... He's DEAD! Let it heal! Let it rest!"
+          </a>
+        </p>
         </p>
       </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <div class="img-fluid text-end">
-          <img src="img/karr-portrait2.jpg" alt="Mary Karr">
+      <div class="col-lg-6" data-aos="fade-left" style="align-self: center;">
+        <div class="text-end">
+          <img 
+            src="img/chuck-bill.jpg" 
+            id="bill_wallace" 
+            alt="Bill Wallace and Chuck Norris"
+            class="img-fluid"
+          >
         </div>
       </div>
     </div>
@@ -65,41 +82,173 @@
 
   <section id="boxing">
     <div class="row">
-      <div class="col-lg-6" style="align-self: center;" data-aos="fade-right">
-        <div class="img-fluid text-start">
-          <img src="img/castellini.jpg" alt="Miguel Angel Castellini">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="text-start">
+          <img 
+            src="img/castellini.jpg" 
+            id="miguel_angel_castellini"
+            alt="Miguel Angel Castellini"
+            class="img-fluid"
+          >
         </div>
       </div>
-      <div class="col-lg-6 text-end" data-aos="fade-left">
+      <div class="col-lg-6 text-end" style="align-self: center;" data-aos="fade-left">
         <h2 class="title_text">
-          <span>B</span>oxing
+          Boxing and inner <span>D</span>emons
         </h2>
+        <p>Almost a decade later, 
+          <a href="https://en.wikipedia.org/wiki/Miguel_%C3%81ngel_Castellini" target="_blank">
+            Ex-world Champion Miguel Angel Castellini
+          </a>
+          , would walk into my life.</p>
+        <p>It was at his gym in Argentina, where the much taller fighters of European ancestry were destroying me.</p>
+        <p>Castellini needs to watch only one of my fights.</p>
         <p>
-          Not fitting a manliness profile made me the bullied kid in school. And being 5'5 as well as not able to practice combat sports could have meant that I could have had to carry some childhood trauma forever with me. 
-          <br><br>
-          But then, the man in the picture, <a href="https://en.wikipedia.org/wiki/Miguel_%C3%81ngel_Castellini">World Welterweight Champion Miguel Castellini</a>, would walk into frame.
-          <br><br>
-          It was in Argentina in 2018. I was boxing at Castellini's gym in Buenos Aires. Argentina is of European ancestry, so they are much taller in average than the rest of the Latinamerican region.
-          <br><br>
-          My first sparring partner in the country would be around 6'4. He destroys me.
-          <br><br>
-          But Castellini was watching. Castellini was old, with brain damage, but with the eyes of a champion still intact. He tells me that my stance is too wide to chase a taller opponent. That I need a footwork like Joe Frazier's
-          <br><br>
-          And so, Castellini puts me on a research path of boxing history that would change my life, and take my ability to face the ghosts of my bullies in the ring to a whole new level
-          <br><br>
-          More on that in the Final Project's section dedicated to Joe Frazier #SequelBaiting \(o_O)/. 
-        </p>
+          He tells me, with the sweetness of an old father figure, that my stance is too wide to chase taller fighters.
+        </p> 
+        <p>That I needed a footwork like Joe Frazier's.</p>
+        <p>And so Castellini sends me down a research path of boxing history that would change how I face the ghosts of my bullies in the ring, and how I feel about myself, forever.</p>
       </div>
     </div>
   </section>
 
-  <section id="jazz"></section>
+  <section id="jazz">
+    <h2 class="title_text text-center">
+      Jazz and its <span>L</span>ife Lessons
+    </h2>
+    <div class="text-center">
+      <div class="owl-carousel owl-theme">
+        <div class="card shadow" style="width: 20rem;">
+          <img src="img/ella-cropped.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title text-center">Ella Fitzgerald</h5>
+            <div class="card-text">
+              <p>Achieved legend status no matter her origins or her skin color.</p>
+              <p>Had an entire music genre, Bebop, <a href="https://www.youtube.com/watch?v=D-7vSmTxAno" target="_blank">named after her scat solos</a>.</p>
+              <p></p>
+            </div>
+            <div class="text-center" style="margin-top: 22px">
+              <a href="https://www.youtube.com/watch?v=iR1__k-BxhY" class="custom_button" target="_blank">Signature Tune</a>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow" style="width: 20rem;">
+          <img src="img/kenny-g-cropped.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title text-center">Kenny G</h5>
+            <div class="card-text">
+              <p>Man, Myth, <a href="https://www.youtube.com/watch?v=447yaU_4DF8" target="_blank">South Park meme</a>.</p>
+              <p>So repetitive <a href="https://www.youtube.com/watch?v=OOO4ROO_sPM&list=PLxQs1zeIV3tJ87NktbcCCxUmWGl1E__64" target="_blank">he'll put a chorus into a song without lyrics</a> .</p>
+              <p>Arch-villain of my childhood.</p>
+            </div>
+            <div class="text-center" style="margin-top: -20px;">
+              <a href="https://www.youtube.com/watch?v=447yaU_4DF8&list=PLxQs1zeIV3tJ87NktbcCCxUmWGl1E__64&index=1" class="custom_button" target="_blank">Signature Tune</a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="card shadow" style="width: 20rem;">
+          <img src="img/ronnie-cuber2-cropped.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title text-center">Ronnie Cuber</h5>
+            <div class="card-text">
+              <p> <a href="https://www.youtube.com/watch?v=__OSyznVDOY">Sexiest baritone sax tunes</a> to ever come out of a white guy.</p>
+              <p>Taught me life and Jazz can be sexy, daring and not boring at all.</p>
+            </div>
+            <div class="text-center">
+              <a href="https://www.youtube.com/watch?v=Bq0BTGRyQzo&list=PLHfs2PxDoECzGEyuyzuene-dKsHuKistg" class="custom_button" target="_blank">Signature Tune</a>
+            </div>
+            
+          </div>
+        </div>
+        <div class="card shadow" style="width: 20rem;">
+          <img src="img/coltrane-cropped.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title text-center">John Coltrane</h5>
+            <div class="card-text">
+              <p>From jobless, alcoholic junkie to musical legend.</p>
+              <p>Managed to turn a spiritual crisis into <a href="https://www.youtube.com/watch?v=62tIvfP9A2w" target="_blank">the most feared song in jazz</a></p>
+            </div>
+            <div class="text-center">
+              <a href="https://www.youtube.com/watch?v=30FTr6G53VU" class="custom_button" target="_blank">Signature Tune</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="owl-navigation">
+      <span class="owl-nav-prev">
+        <i class="fas fa-chevron-left"></i>
+      </span>
+      <span class="owl-nav-next">
+        <i class="fas fa-chevron-right"></i>
+      </span>
+    </div>
+  </section>
 
-  <!-- Bootstrap JS Bundle from CDN -->
+  <section id="programming">
+    <div class="row">
+      <div class="col-lg-5" style="align-self: center;">
+        <div class="row">
+          <img 
+            src="img/bowser.jpg" 
+            alt="Bowser" 
+            class="img-fluid mb-2"
+            data-aos="fade-down-right">
+        </div>
+        <div class="row">
+          <img 
+            src="img/uncle-bob.jpg" 
+            alt="Uncle Bob" 
+            class="img-fluid"
+            data-aos="fade-up-right"
+          >
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1 text-end" data-aos="fade-left">
+        <h2 class="title_text">
+          Programming and a <span>H</span>appy ending
+        </h2>
+        <p>I started programming at 35 to get out of dead-end jobs teaching and freelancing.</p>
+        <p>I came for the money but I stayed because programming is an art.</p>
+        <p>Writing code feels like writing prose, designing feels like painting on a canvas.</p>
+        <p>Unexpectedly, programming helped me develop a new, healthy relationship with computers, away from videogames.</p>
+        <p>So here we are at the end.</p>
+        <p>At the edge of a new beginning.</p>
+        <p>Thank you, people at Harvard, for what you do and put out there for free.</p>
+        <p>There are many of us who could never have afforded this.</p>
+        <p>To us this means the world.</p>
+        <p>Thank you.</p>
+        <p><b>Jesus Rangel</b></p>  
+      </div>
+    </div>
+  </section>
+  
+  <div class="copyright_text">
+    <p>Base layout from 
+      <a href="https://www.youtube.com/watch?v=ac5nmWOkBEY&t=1361s">
+        <i class="fab fa-youtube"></i> Online Tutorials'
+      </a>
+       Youtube Channel
+    </p>
+  </div>
+
+  <!-- JQuery (required by Owl Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-  <!-- Action on Scroll JS from CDN -->
+  <!-- Action on Scroll JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Tippy Tooltip -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="OwlCarousel/dist/owl.carousel.min.js"></script>
 
   <!-- Custom JS -->
   <script src="app.js"></script>
