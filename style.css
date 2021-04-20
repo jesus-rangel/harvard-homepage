@@ -1,15 +1,27 @@
 /** 
  *
+ * CREDITS
+ * 
  * Main layout based on Online Tutorial's responsive web design tutorial on YouTube.
  @ https://www.youtube.com/watch?v=enBAFo2kEfE
  *
  * Semi-transparent layer over background
  @ https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image
  *
+ * Owl Carousel and Action On Scroll setup from Daily Tuition
+ @ https://www.youtube.com/watch?v=CrSC1ZA9j0M
+ * 
+ * 
+ * IMPORTANT
+ * The Responsiveness of this website was tested resizing the window of the browser.
+ * Trying it on mobile devices, whether simulated in dev tools or real ones, 
+ * ended up in unpredictable results per brand, which I couldn't find the solution for.
+ *
 **/ 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* *** Global Attributes *** */
 *
 {
   font-family: 'Poppins', sans-serif;
@@ -40,71 +52,10 @@ p
   font-size: 1.05em;
 }
 
-#banner
-{
-  position: relative;
-  width: 100%;
-  min-height: 130vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(img/Homepage_Collage.png);
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+/* *** End of Global Attributes *** */
 
 
-.layer
-{
-  background-color: rgba(0, 0, 0, 0.7);
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#banner .content 
-{
-  z-index: 2;
-  max-width: 900px;
-  text-align: center;
-}
-
-#banner .content h2
-{
-  font-size: 4em;
-  color: white;
-  font-weight: bold;
-}
-
-#banner .content p 
-{
-  font-size: 1em;
-  color: white;
-}
-
-.custom_button
-{
-  font-size: 1em;
-  color: white;
-  background: #ff0157;
-  display: inline-block;
-  padding: 10px 30px;
-  margin-top: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-  transition: 0.5s
-}
-
-.custom_button:hover
-{
-  letter-spacing: 6px;
-  padding: 9px 30px;
-  color:white;
-}
+/* *** Navbar *** */
 
 header
 {
@@ -113,7 +64,7 @@ header
   left: 0;
   width: 100%;
   padding: 40px 100px;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,7 +114,7 @@ header .navigation li
 header .navigation li a
 {
   text-decoration: none;
-  color: #111;
+  color: white;
   font-weight: 300;
 }
 
@@ -176,6 +127,132 @@ header .navigation li a:hover
 {
   color: #ff0157;
 }
+
+/* *** End of Navbar *** */
+
+/* *** Landing Screen *** */
+
+.opaque_layer
+{
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.opaque_layer, .pic_container
+{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Landing Screen Collage */
+
+.pic_container
+{
+  
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr 1fr;
+  grid-auto-flow: dense;
+}
+
+.vertical
+{
+  grid-row: span 2;
+}
+
+.pic_container > div
+{
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* End of Collage */
+
+/* Collage Pictures */
+
+#dancing
+{
+  background: url(assets/dancing.jpg);
+}
+
+#selfie
+{
+  background: url(assets/selfie.jpg);
+}
+
+#punch
+{
+  background: url(assets/punch.jpg);
+}
+
+#kung-fu
+{
+  background: url(assets/kung-fu.jpg);
+}
+
+/* End of Collage Pictures */
+
+#banner
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+#banner .content 
+{
+  z-index: 3;
+  max-width: 900px;
+  text-align: center;
+}
+
+#banner .content h2
+{
+  font-size: 4em;
+  color: white;
+  font-weight: bold;
+}
+
+#banner .content p 
+{
+  font-size: 1em;
+  color: white;
+}
+
+.custom_button
+{
+  font-size: 1em;
+  color: white;
+  background: #ff0157;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s
+}
+
+.custom_button:hover
+{
+  letter-spacing: 6px;
+  padding: 9px 30px;
+  color:white;
+}
+
 
 .title_text
 {
@@ -191,57 +268,13 @@ header .navigation li a:hover
   font-size: 1.5em;
 }
 
-/* *** Media Queries  *** */
-@media (max-width:767px)
-{
-  #banner 
-  {
-    background: url(img/selfie.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
+/* *** End of Landing Screen *** */
 
-/* *** Card Carousel *** */
-
-.image-container
-{
-  height: 250px;
-}
+/* *** Owl Carousel *** */
 
 .card
 {
   width: 20rem;
-  max-heigth: 533px !important;
-}
-
-.card_img
-{
-  width: 20rem;
-  max-width: 100%;
-  min-height: 250px;
-  background-size: contain;
-  background-position: center center;
-}
-
-#kenny-g
-{
-  background: url(img/kenny-g.jpg);
-}
-
-#ronnie-cuber
-{
-  background: url(img/ronnie-cuber2.jpg);
-}
-
-#coltrane
-{
-  background: url(img/coltrane.jpg);
-}
-
-#ella
-{
-  background: url(img/ella.jpg);
 }
 
 .owl-nav .owl-prev .owl-nav-prev,
@@ -258,257 +291,10 @@ header .navigation li a:hover
   color: #ff0157;
 }
 
-/* From here on it's just the tutorial */
+/* *** End of Owl Carousel *** */
 
-/* *** Menu *** */
-.title
-{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.menu .content
-{
-  display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.menu .content .box
-{
-  width: 340px;
-  margin: 20px;
-  border: 15px solid #fff;
-  box-shadow: 0 5px 35px rgba(0,0,0,0.08);
-
-}
-
-.menu .content .box .imgBx
-{
-  position: relative;
-  width: 100%;
-  height: 300px;
-}
-
-.menu .content .box .imgBx img
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
-
-.menu .content .box .text
-{
-  padding: 15px 0 5px;
-}
-
-.menu .content .box .text h3
-{
-  font-weight: 400;
-  color: #111;
-  font-size: 1.17em;
-}
-
-/* *** End of Menu *** */
-
-/* *** Experts *** */
-
-.expert .content
-{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-top: 40px
-}
-
-.expert .content .box
-{
-  width: 250px;
-  margin: 15px;
-}
-
-.expert .content .box .imgBx
-{
-  position: relative;
-  width: 100%;
-  height: 300px;
-}
-
-.expert .content .box .imgBx img
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover:
-}
-
-.expert .content .box .text
-{
-  padding: 15px 0 5px;
-}
-
-.expert .content .box .text h3
-{
-  font-weight: 400;
-  color: #111;
-  font-size: 1.17em;
-}
-
-/* *** End of Experts *** */
-
-/* *** Testimonials *** */
-
-.testimonials
-{
-  background: url(images/bg2.jpg);
-  background-size: cover;
-}
-
-.white .title_text, 
-.white p
-{
-  color: white;
-}
-
-.testimonials .content
-{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-top: 40px;
-}
-
-.testimonials .content .box
-{
-  width:340px;
-  margin: 20px;
-  padding: 40px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.testimonials .content .box .imgBx
-{
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.testimonials .content .box .imgBx img
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.testimonials .content .box .text
-{
-  text-align: center;
-}
-
-.testimonials .content .box .text p
-{
-  color: #666;
-  font-style: italic;
-}
-
-.testimonials .content .box .text h3
-{
-  margin-top: 20px;
-  font-size: 1em;
-  color: #ff0157;
-  font-weight: 600;
-}
-
-/* *** End of Testimonials *** */
-
-/* *** Contact Form *** */
-
-.contact
-{
-  background: url(images/bg3.jpg);
-  background-size: cover;
-}
-
-.contactForm
-{
-  padding: 75px 50px;
-  background: white;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin-top: 50px;
-}
-
-.contactForm h3
-{
-  color: #111;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 500;
-
-}
-
-.contact .inputBox
-{
-  position: relative;
-  width: 100%;
-  margin-bottom: 20px;
-
-}
-
-.contactForm .inputBox input,
-.contactForm .inputBox textarea
-{
-  width: 100%;
-  border: 1px solid #555;
-  padding: 10px;
-  color: #111;
-  outline: none;
-  font-size: 16px;
-  font-weight: 300;
-  resize: none;
-}
-
-.contactForm .inputBox input[type="submit"]
-{
-  font-size: 1em;
-  color: #fff;
-  background: #ff0157;
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-  transition: 0.5s;
-  max-width: 100px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-}
-
-/* *** End of Contact Form *** */
-
+/* *** Media Queries *** */
 .copyright_text
 {
   padding: 8px 40px;
@@ -526,6 +312,21 @@ header .navigation li a:hover
   Color: #ff0157;
   font-weight: 500;
   text-decoration: none;
+}
+
+@media (max-width: 1199px)
+{
+
+
+  #dancing
+  {
+    display:none;
+  }
+
+  .pic_container
+  {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 991px)
@@ -562,7 +363,8 @@ header .navigation li a:hover
   
   header .navigation li a
   {
-
+    color: #111;
+    font-size: 1.6em;
   }
 
   .menu_toggle
@@ -570,7 +372,7 @@ header .navigation li a:hover
     position: relative;
     width: 40px;
     height: 40px;
-    background: url(img/menu.png);
+    background: url(assets/menu.png);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -580,7 +382,7 @@ header .navigation li a:hover
 
   .menu_toggle.active
   {
-    background: url(img/close.png);
+    background: url(assets/close.png);
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
@@ -640,6 +442,19 @@ header .navigation li a:hover
     padding: 35px 40px;
     margin-top: 20px;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px)
+{
+  #punch, #kung-fu
+  {
+    display:none;
+  }
+  
+  .pic_container
+  {
+    grid-template-columns: 1fr;
   }
 }
 

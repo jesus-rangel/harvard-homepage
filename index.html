@@ -28,17 +28,23 @@
 <body>
   <header>
     <a href="#banner" class="logo">Homepage<span>.</span></a>
-    <div class="menu_toggle" onclick="toggleMenu()"></div>
+    <div class="menu_toggle toggler"></div>
     <ul class="navigation">
-      <li><a href="#banner" onclick="toggleMenu()">Back To Top</a></li>
-      <li><a href="#poetry" onclick="toggleMenu()">Poetry</a></li>
-      <li><a href="#boxing" onclick="toggleMenu()">Boxing</a></li>
-      <li><a href="#jazz" onclick="toggleMenu()">Jazz</a></li>
-      <li><a href="#programming" onclick="toggleMenu()">Programming</a></li>
+      <li><a href="#banner" class="toggler">Scroll Top</a></li>
+      <li><a href="#poetry" class="toggler">Poetry</a></li>
+      <li><a href="#boxing" class="toggler">Boxing</a></li>
+      <li><a href="#jazz" class="toggler">Jazz</a></li>
+      <li><a href="#programming" class="toggler">Programming</a></li>
     </ul>
   </header>
   <section id="banner">
-    <div class="layer"></div>
+    <div class="pic_container">
+      <div class="vertical" id="dancing"></div>
+      <div class="vertical" id="selfie"></div>
+      <div id="punch"></div>
+      <div id="kung-fu"></div>
+    </div>
+    <div class="opaque_layer"></div>
     <div class="content">
       <h2>Jesus Rangel<br>Junior Developer</h2>
       <p>I am a PHP Full Stack Web Developer from Venezuela. <br>This is my journey.</p>
@@ -70,8 +76,8 @@
       <div class="col-lg-6" data-aos="fade-left" style="align-self: center;">
         <div class="text-end">
           <img 
-            src="img/chuck-bill.jpg" 
-            id="bill_wallace" 
+            src="assets/chuck-bill.jpg" 
+            id="bill-wallace" 
             alt="Bill Wallace and Chuck Norris"
             class="img-fluid"
           >
@@ -85,8 +91,8 @@
       <div class="col-lg-6" data-aos="fade-right">
         <div class="text-start">
           <img 
-            src="img/castellini.jpg" 
-            id="miguel_angel_castellini"
+            src="assets/castellini.jpg" 
+            id="miguel-angel-castellini"
             alt="Miguel Angel Castellini"
             class="img-fluid"
           >
@@ -119,7 +125,7 @@
     <div class="text-center">
       <div class="owl-carousel owl-theme">
         <div class="card shadow" style="width: 20rem;">
-          <img src="img/ella-cropped.jpg" alt="" class="card-img-top">
+          <img src="assets/ella-cropped.jpg" alt="" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title text-center">Ella Fitzgerald</h5>
             <div class="card-text">
@@ -133,11 +139,11 @@
           </div>
         </div>
         <div class="card shadow" style="width: 20rem;">
-          <img src="img/kenny-g-cropped.jpg" class="card-img-top">
+          <img src="assets/kenny-g-cropped.jpg" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title text-center">Kenny G</h5>
             <div class="card-text">
-              <p>Man, Myth, <a href="https://www.youtube.com/watch?v=447yaU_4DF8" target="_blank">South Park meme</a>.</p>
+              <p>Man, Myth, <a href="https://www.youtube.com/watch?v=p3jdwMY8CJ4&t=20s" target="_blank">South Park meme</a>.</p>
               <p>So repetitive <a href="https://www.youtube.com/watch?v=OOO4ROO_sPM&list=PLxQs1zeIV3tJ87NktbcCCxUmWGl1E__64" target="_blank">he'll put a chorus into a song without lyrics</a> .</p>
               <p>Arch-villain of my childhood.</p>
             </div>
@@ -148,7 +154,7 @@
           </div>
         </div>
         <div class="card shadow" style="width: 20rem;">
-          <img src="img/ronnie-cuber2-cropped.jpg" class="card-img-top">
+          <img src="assets/ronnie-cuber2-cropped.jpg" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title text-center">Ronnie Cuber</h5>
             <div class="card-text">
@@ -162,7 +168,7 @@
           </div>
         </div>
         <div class="card shadow" style="width: 20rem;">
-          <img src="img/coltrane-cropped.jpg" alt="" class="card-img-top">
+          <img src="assets/coltrane-cropped.jpg" alt="" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title text-center">John Coltrane</h5>
             <div class="card-text">
@@ -187,22 +193,24 @@
     </div>
   </section>
 
-  <section id="programming">
+  <section id="programming" class="mb-5">
     <div class="row">
       <div class="col-lg-5" style="align-self: center;">
         <div class="row">
           <img 
-            src="img/bowser.jpg" 
+            src="assets/bowser.jpg" 
             alt="Bowser" 
             class="img-fluid mb-2"
-            data-aos="fade-down-right">
+            data-aos="fade-down-right"
+            id="bowser">
         </div>
         <div class="row">
           <img 
-            src="img/uncle-bob.jpg" 
+            src="assets/uncle-bob.jpg" 
             alt="Uncle Bob" 
             class="img-fluid"
             data-aos="fade-up-right"
+            id="uncle-bob">
           >
         </div>
       </div>
@@ -210,7 +218,8 @@
         <h2 class="title_text">
           Programming and a <span>H</span>appy ending
         </h2>
-        <p>I started programming at 35 to get out of dead-end jobs teaching and freelancing.</p>
+        <p>Having handled my inner demons, I needed to get my life financially on track</p>
+        <p>I started programming at 34 to get out of dead-end jobs teaching and freelancing.</p>
         <p>I came for the money but I stayed because programming is an art.</p>
         <p>Writing code feels like writing prose, designing feels like painting on a canvas.</p>
         <p>Unexpectedly, programming helped me develop a new, healthy relationship with computers, away from videogames.</p>

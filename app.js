@@ -2,13 +2,6 @@ $(document).ready(function(){
   
   /* *** Action on Scroll activation *** */
   AOS.init();
-  
-  /* *** Navbar transform after scrolling *** */
-  window.addEventListener('scroll', () =>{
-    const header = document.querySelector('header');
-  
-    header.classList.toggle('sticky', window.scrollY > 0);
-  });
 
   /* *** Owl Carousel *** */
   const
@@ -40,14 +33,23 @@ $(document).ready(function(){
 
   /* *** Tippy Tooltips *** */
 
-  tippy('#bill_wallace', {
+  tippy('#bill-wallace', {
     content: 'Bill "Superfoot" Wallace and Chuck Norris'
   });
 
-  tippy('#miguel_angel_castellini', {
+  tippy('#miguel-angel-castellini', {
     content: 'Miguel Angel Castellini'
   });
 });
+
+tippy('#bowser', { 
+  content: 'Random videogame villainy to convey gaming addiction'
+});
+
+tippy('#uncle-bob', { 
+  content: 'Perhaps code resembles art because, like Uncle Bob says "You write code for your human teammates, not the computer."'
+});
+
 
 /* *** Navbar Hamburger Menu *** */
 
@@ -61,24 +63,19 @@ function toggleMenu()   // Function called in HTML onclick Attribute
   navigation.classList.toggle('active');
 }
 
-/* *** Text to change when responsive pictures move *** */
+const togglers = Array.from(document.querySelectorAll('.toggler'))
 
-const wallace_pic_location = document.querySelector('.wallace_pic_location');
-let width = window.matchMedia("(min-width: 991px)");
-
-function pictureLocation(width) {
-  if (width.matches) { // If media query matches
-    wallace_pic_location.innerText = '(Right)';
-  } else {
-    wallace_pic_location.innerText = '(Bottom)';
-  }
-}
-
-pictureLocation(width)        // Call listener function at run time
-window.onresize = (e) => {    // And call it on window resize
-  pictureLocation(width);
-}
+togglers.forEach(toggler => {
+  toggler.addEventListener('click', () =>{
+    console.log('Toggler has been clicked');
+    toggleMenu();
+  })
+});
 
 
+/* *** Navbar transform after scrolling *** */
+window.addEventListener('scroll', () =>{
+  const header = document.querySelector('header');
 
-
+  header.classList.toggle('sticky', window.scrollY > 0);
+});
