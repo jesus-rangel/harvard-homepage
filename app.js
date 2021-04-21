@@ -30,7 +30,6 @@ $(document).ready(function(){
   });
 
 
-
   /* *** Tippy Tooltips *** */
 
   tippy('#bill-wallace', {
@@ -40,15 +39,18 @@ $(document).ready(function(){
   tippy('#miguel-angel-castellini', {
     content: 'Miguel Angel Castellini'
   });
+
+
+  tippy('#bowser', { 
+    content: 'Random videogame villainy to convey gaming addiction'
+  });
+
+  tippy('#uncle-bob', { 
+    content: 'Perhaps code resembles art because, like Uncle Bob says "You write code for your human teammates, not the computer."'
+  });
 });
 
-tippy('#bowser', { 
-  content: 'Random videogame villainy to convey gaming addiction'
-});
 
-tippy('#uncle-bob', { 
-  content: 'Perhaps code resembles art because, like Uncle Bob says "You write code for your human teammates, not the computer."'
-});
 
 
 /* *** Navbar Hamburger Menu *** */
@@ -78,4 +80,5 @@ window.addEventListener('scroll', () =>{
   const header = document.querySelector('header');
 
   header.classList.toggle('sticky', window.scrollY > 0);
+  console.log('scrolled')
 });

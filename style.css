@@ -11,11 +11,6 @@
  * Owl Carousel and Action On Scroll setup from Daily Tuition
  @ https://www.youtube.com/watch?v=CrSC1ZA9j0M
  * 
- * 
- * IMPORTANT
- * The Responsiveness of this website was tested resizing the window of the browser.
- * Trying it on mobile devices, whether simulated in dev tools or real ones, 
- * ended up in unpredictable results per brand, which I couldn't find the solution for.
  *
 **/ 
 
@@ -62,7 +57,7 @@ header
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 40px 100px;
   z-index: 4;
   display: flex;
