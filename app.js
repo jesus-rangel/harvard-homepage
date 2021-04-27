@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 /* *** Navbar Hamburger Menu *** */
 
-function toggleMenu()   // Function called in HTML onclick Attribute
+function toggleMenu()   
 {
   const 
     menu_toggle = document.querySelector('.menu_toggle'),

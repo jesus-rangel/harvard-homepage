@@ -168,8 +168,6 @@ header .navigation li a:hover
   background-repeat: no-repeat !important;
 }
 
-/* End of Collage */
-
 /* Collage Pictures */
 
 #dancing
@@ -192,7 +190,7 @@ header .navigation li a:hover
   background: url(assets/kung-fu.jpg);
 }
 
-/* End of Collage Pictures */
+/* End of Collage */
 
 #banner
 {
@@ -206,8 +204,6 @@ header .navigation li a:hover
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
 
 #banner .content 
 {
@@ -272,6 +268,7 @@ header .navigation li a:hover
 .card
 {
   width: 20rem;
+  height: 514px;
 }
 
 .owl-nav .owl-prev .owl-nav-prev,
